@@ -2,8 +2,9 @@
 This project implements AR features for projecting 3D shapes onto video footage with square trackers. </br></br>
 The program first locates the corners of the square trackers as markers using the [condensation algorithm](https://en.wikipedia.org/wiki/Condensation_algorithm).</br>
 The marker positions are used for pose estimation. </br>
-Specifically, the homography, rotation, and translation matrices are estimated to determine the state of the transformation matrix. </br>
-The transformation matrix enables the conversion between screen-space pixel positions and 3D coordinates.  </br>
+Specifically, the rotation, and translation matrices are estimated to determine the state of the extrinsic matrix. </br>
+This matrix enables the conversion between screen-space pixel positions and 3D coordinates.  </br>
+Nonlinear minimization was performed on the estimated matrix to improve projection accuracy. </br>
 With this 3D shapes could be projected into the 2D footage.
 
 ## Libraries
